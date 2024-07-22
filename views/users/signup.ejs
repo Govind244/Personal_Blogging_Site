@@ -1,0 +1,93 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+
+<style>
+    .log {
+        background-color:#586ec7;
+        padding: 30px;
+        border-radius: 20px; 
+        max-width: 400px; 
+        margin: 50px auto; 
+        background-image: linear-gradient(to bottom, #6d86e9 20%, #c5a3b0 100%);
+        transition: background-color 0.4s ease;
+    }
+    .log:hover {
+        /* background-color: #c5a3b0;  */
+        background-image: linear-gradient(to top, #637ad4 20%, #c5a3b0 100%);
+    }
+    .log h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .log .newForm {
+        padding: 20px;
+    }
+    .log .form-label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        
+    }
+    .log .form-control {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .log .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    .log .btn {
+        margin-top: 10px;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+</style>
+
+<body>
+<div class="log">
+<h2 style="color: rgb(57, 51, 38) !important; text-align: center; margin: 20px;">Sign-up</h2>
+<!-- <h2 style="color: rgb(57, 51, 38) !important; text-align: center; margin: 20px;">Fill-up the details</h2> -->
+<div class="row " >
+    <div >
+        <div class="newForm">
+            <form action="/user/signup" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3 login-color">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" required name="username" placeholder="Enter Username" id="username"
+                        class="form-control">
+                    <div class="valid-feedback">Username is good!</div>
+                    <div class="invalid-feedback">Enter username!</div>
+                </div>
+                <div class="mb-3 login-color">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" required name="name" placeholder="Enter name" id="name" class="form-control">
+                    <div class="valid-feedback">name is good!</div>
+                    <div class="invalid-feedback">Enter Name!</div>
+                </div>
+                <div class="mb-3 login-color">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" required name="email" placeholder="Enter email" id="email" class="form-control">
+                </div>
+                <div class="mb-3 login-color">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" required name="password" placeholder="Enter password" id="password" class="form-control">
+                    <div class="valid-feedback">password looks good!</div>
+                    <div class="invalid-feedback">Enter password!</div>
+                </div>
+                <br>
+                <div class="mb-3 login-color">
+                    <label for="image" class="form-label"><b>Image Upload</b></label>
+                    <input type="file" name="image" id="image" class="form-control">
+                </div>
+                <br>
+                <center><button class="btn btn-primary btn-sm">sign-up</button></center>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>
